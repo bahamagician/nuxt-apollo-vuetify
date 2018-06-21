@@ -24,14 +24,21 @@ export default {
       blogs: []
     }
   },
-  apollo: {
-    blogs: gql`{
-        blogs {
-          id
-          title
-          body
-        }
-      }`
+    apollo: {
+    blogs: {
+      query: blogs
+    }
   }
+
+  // Alternative method
+  // apollo: {
+  //   blogs: gql`{
+  //       blogs {
+  //         id
+  //         title
+  //         body
+  //       }
+  //     }`
+  // }
 };
 </script>

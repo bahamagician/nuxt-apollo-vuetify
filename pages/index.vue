@@ -7,25 +7,17 @@
       </div>
       <v-card>
         <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>
-        <v-card-text v-for="blog in blogs" :key="blog.id">
-          <p>{{ blog.title }}</p>
+        <v-card-text>
+          <p>Whaps</p>
         </v-card-text>
       </v-card>
     </v-flex>
   </v-layout>
 </template>
 <script>
-import gql from "graphql-tag";
+
 
 export default {
-  apollo: {
-    blogs: gql`{
-        blogs {
-          id
-          title
-          body
-        }
-      }`
-  }
+
 };
 </script>

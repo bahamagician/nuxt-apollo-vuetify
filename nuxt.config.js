@@ -22,13 +22,9 @@ module.exports = {
       // 在国内，建议使用 https://fonts.cat.net/  替换
     ]
   },
-  modules: ["@nuxtjs/apollo", "nuxt-sass-resources-loader"],
-  apollo: {
-    clientConfigs: {
-      default: "~/plugins/apollo.js"
-    }
-  },
-  sassResources: ["@/assets/style/app.scss", "~/assets/style/app.scss"],
+  modules: ["nuxt-sass-resources-loader"],
+
+  sassResources: ["@/assets/style/app.scss", "~/assets/style/app.styl"],
   plugins: ["~/plugins/vuetify.js", "~/plugins/vuelidate.js"],
   css: ["~/assets/style/app.styl"],
   devtool: "#eval-source-map",
@@ -56,7 +52,7 @@ module.exports = {
       ]
     },
 
-    vendor: ["vuetify", "graphql-tag"],
+    vendor: ["vuetify"],
     extractCSS: true,
     extend(config, ctx) {
       if (ctx.isServer) {

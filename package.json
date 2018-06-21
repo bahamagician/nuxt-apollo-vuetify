@@ -11,17 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/apollo": "^3.0.6",
-    "apollo-cache-inmemory": "^1.2.1",
-    "apollo-client": "^2.3.1",
-    "apollo-link": "^1.2.2",
-    "apollo-link-context": "^1.0.8",
-    "apollo-link-http": "^1.5.4",
-    "apollo-link-ws": "^1.0.8",
-    "apollo-utilities": "^1.0.12",
     "axios": "^0.18.0",
-    "graphql": "^0.13.2",
-    "graphql-tag": "^2.9.2",
     "nuxt": "^1.0.0",
     "nuxt-sass-resources-loader": "^2.0.2",
     "sass-loader": "^7.0.3",

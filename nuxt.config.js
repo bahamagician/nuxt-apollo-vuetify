@@ -25,7 +25,11 @@ module.exports = {
   modules: ["nuxt-sass-resources-loader"],
 
   sassResources: ["@/assets/style/app.scss", "~/assets/style/app.styl"],
-  plugins: ["~/plugins/vuetify.js", "~/plugins/vuelidate.js"],
+  plugins: [
+    { src: "~/plugins/apollo.js" },
+    "~/plugins/vuetify.js",
+    "~/plugins/vuelidate.js"
+  ],
   css: ["~/assets/style/app.styl"],
   devtool: "#eval-source-map",
   /*
@@ -52,9 +56,14 @@ module.exports = {
       ]
     },
 
-    vendor: ["vuetify"],
+    vendor: ["vuetify", "graphql-tag"],
     extractCSS: true,
     extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: "graphql-tag/loader"
+      });
       if (ctx.isServer) {
         config.externals = [
           nodeExternals({
